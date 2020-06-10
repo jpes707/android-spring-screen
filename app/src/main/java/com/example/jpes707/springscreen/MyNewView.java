@@ -9,18 +9,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
-import android.graphics.Rect;
-import android.os.Handler;
-import android.support.annotation.Dimension;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Display;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
-
 
 public class MyNewView extends View {
     private final int FLOWER_COUNT = 50;
@@ -35,20 +27,12 @@ public class MyNewView extends View {
     /* ------------------------*/
     /*    member variables     */
 
-    private Handler mHandler;
-
-    private int mCount;
     private Paint mPaint;
-    private Canvas mCanvas;
-
-
     /* ------------------------*/
     /*    constructor          */
 
     public MyNewView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mHandler = new Handler();
-        mCount = 0;
         radius = 0;
         additional_angle = 0;
         setupPaint();
